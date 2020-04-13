@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="manifest" href="/manifest.json">
+    <meta name="theme-color" content="#317EFB"/>
+    <meta name="Description" content="a simple single page web app which allows one to get an estimate of the Covid-19 impact of a region">
+    <meta name="Marius Mulama" content="Owner">
+    <meta name="keywords" content="SDG">
+
+    <title>Covid 19 Estimator</title>
+    <link rel="stylesheet" href="./css/index.css">
+    <link rel="icon" href="media/icon.jpg">
+    <link rel="apple-touch-icon" href="/icon.png">
+</head>
+<body>
+    <header>
+        <h2>COVID-19 ESTIMATOR</h2>
+    </header>
+    
+    <div class="form-container">
+        <form action="#" method="POST" data-netlify="true" class="form">
+            <fieldset>
+                <label for="data-population">Population</label><br>
+                <input type="number" id="data-population" name="population-data" placeholder="Enter Population of The Region" min="0" data-population="population" required><br>
+
+                <label for="time-to-elapse">Time To Elapse</label><br>
+                <input type="number" id="time-to-elapse" name="time" placeholder="Enter the Time" min="0" data-time-to-elapse="timeToElapse" required><br>
+
+                <label for="data-period-type">Period Type</label><br>
+                <select id="data-period-type" name="period-type" data-period-type="periodType" required><br>
+                <option value="days">Days</option>
+                <option value="weeks">Weeks</option>
+                <option value="months">Months</option>
+                </select>
+                <br>
+
+                <label for="reported-cases">Reported Cases</label><br>
+                <input type="number" id="reported-cases" name="cases-reported" data-reported-cases="reportedCases" placeholder="Number of Reported Cases" min="0" required><br>
+
+                <label for="hospital-beds">Total Hospital Beds</label><br>
+                <input type="number" id="hospital-beds" name="beds" data-total-hospital-beds="totalHospitalBeds" placeholder="Number of Available beds" min="0" required><br>
+
+                <input type="submit" value="CHECK ESTIMATES" id="data-go-estimate" data-go-estimate="data-go-estimate">
+            </fieldset>
+        </form>
+      </div>
+
+      <footer>
+        <p>Covid19 Estimator - Build4SDG Challenge Assesment Project</p>
+        <p>Copyright &copy; 2020</p>
+      </footer>
+</body>
+</html>
